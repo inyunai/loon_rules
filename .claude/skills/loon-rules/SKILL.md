@@ -4,6 +4,9 @@ description: |
   管理 Loon 代理规则文件。当用户发送代理规则内容（DOMAIN/DOMAIN-SUFFIX/DOMAIN-KEYWORD/IP-CIDR/USER-AGENT/URL-REGEX 格式）
   或者提到"添加规则""更新规则""Loon 规则""代理规则""分流规则"时触发。
   规则来源不限：Gemini 给的、手写的、从其他仓库复制的都可以。
+  
+  同时也管理代理图标。当用户提到"图标""icon""logo""策略图标""节点图标"以及
+  带图片 URL 的链接（如 raw.githubusercontent.com 的 PNG 地址）时触发。
 ---
 
 # Loon Rules Manager
@@ -73,7 +76,36 @@ git push origin master
 
 提交信息格式：`feat: add/update <平台名> rules`
 
-## 示例
+---
+
+## 图标管理
+
+### 获取图标
+
+1. 用户给 PNG URL → 直接下载到 `icons/<平台名>.png`
+2. 用户给 SVG → 先用 Inkscape 转 PNG（256×256），SVG 也保留作源文件：
+   ```bash
+   "C:/Program Files/Inkscape/bin/inkscape.exe" <input.svg> --export-type=png --export-filename="d:/desktop/loon_rules/icons/<平台名>.png" --export-width=256 --export-height=256
+   ```
+3. 用户只要某个平台的图标 → 按以下顺序找：
+   - 先搜 Qure：`https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/<平台名>.png`
+   - 没有就搜 Orz-3/mini
+   - 再没有就用 GitHub API 搜 `<平台名> logo`，优先找 SVG 再转 PNG
+   - `raw.githubusercontent.com` 被 DNS 污染时，用 GitHub API（`gh api repos/.../contents/...`）获取 base64 内容再解码
+
+### 写入图标
+
+保存到 `d:\desktop\loon_rules\icons/` 目录，更新 `icons/README.md` 中的图标列表。
+
+### 引用链接
+
+```
+https://raw.githubusercontent.com/inyunai/loon_rules/master/icons/<平台名>.png
+```
+
+---
+
+## 规则示例
 
 **输入：**
 ```
@@ -90,3 +122,13 @@ DOMAIN,api.bybit.com
 - 更新 `README.md`
 - commit: `feat: add Bybit rules`
 - 推送后给出 Loon 引用链接
+
+## 图标示例
+
+**输入：** "帮我找 Bybit 的图标" 或直接给一个图标 URL
+
+**输出：**
+- 下载/转换到 `icons/Bybit.png`
+- 更新 `icons/README.md`
+- commit: `feat: add Bybit icon`
+- 推送后给出图标引用链接
