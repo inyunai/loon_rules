@@ -5,9 +5,14 @@ Loon 代理规则集合。
 ## 目录结构
 
 ```
-rules/
-├── bybit.list      # Bybit 独立规则（12条）
-└── trading.list    # 交易平台合集
+├── rules/
+│   ├── bybit.list      # Bybit 独立规则（12条）
+│   └── trading.list    # 交易平台合集
+├── icons/
+│   ├── Bybit.png       # Bybit 图标 256x256
+│   └── Bybit.svg       # Bybit 图标源文件
+└── .claude/skills/
+    └── loon-rules/     # 规则管理 Skill
 ```
 
 ## 规则统计
@@ -20,9 +25,15 @@ rules/
 
 ### Loon 引用（推荐）
 
+规则链接：
 ```
 https://raw.githubusercontent.com/inyunai/loon_rules/master/rules/bybit.list
 https://raw.githubusercontent.com/inyunai/loon_rules/master/rules/trading.list
+```
+
+图标链接：
+```
+https://raw.githubusercontent.com/inyunai/loon_rules/master/icons/Bybit.png
 ```
 
 ### 本地使用
