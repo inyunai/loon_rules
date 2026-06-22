@@ -1,18 +1,24 @@
 # Loon Rules
 
-Loon 代理规则集合。
+Loon / Quantumult X 代理规则、重写脚本集合。
 
 ## 目录结构
 
 ```
 ├── rules/
-│   ├── bybit.list      # Bybit 独立规则（12条）
-│   └── trading.list    # 交易平台合集
+│   ├── bybit.list          # Bybit 规则（12条）
+│   ├── douyin.list         # 抖音规则（22条）
+│   ├── trading.list        # 交易平台合集
+│   └── social.list         # 社交/短视频合集
+├── rewrite/
+│   ├── spotify-fixed.js    # Spotify 解锁脚本
+│   ├── spotify-fixed.snippet     # QX 重写规则（Anti-Logout）
+│   └── spotify-premium.snippet   # QX 重写规则（Stability）
 ├── icons/
-│   ├── Bybit.png       # Bybit 图标 256x256
-│   └── Bybit.svg       # Bybit 图标源文件
+│   ├── Bybit.png           # Bybit 图标 256×256
+│   └── Bybit.svg           # Bybit 图标源文件
 └── .claude/skills/
-    └── loon-rules/     # 规则管理 Skill
+    └── loon-rules/         # 规则管理 Skill
 ```
 
 ## 规则统计
@@ -20,25 +26,29 @@ Loon 代理规则集合。
 | 规则集 | 数量 | 类型 |
 |--------|------|------|
 | Bybit | 12 | DOMAIN-KEYWORD ×1, DOMAIN-SUFFIX ×7, DOMAIN ×4 |
+| 抖音 | 22 | DOMAIN ×2, DOMAIN-SUFFIX ×20 |
+| 合集 | 34 | |
 
 ## 使用方式
 
-### Loon 引用（推荐）
+### Loon 引用
 
-规则链接：
+规则：
 ```
 https://raw.githubusercontent.com/inyunai/loon_rules/master/rules/bybit.list
+https://raw.githubusercontent.com/inyunai/loon_rules/master/rules/douyin.list
 https://raw.githubusercontent.com/inyunai/loon_rules/master/rules/trading.list
 ```
 
-图标链接：
+图标：
 ```
 https://raw.githubusercontent.com/inyunai/loon_rules/master/icons/Bybit.png
 ```
 
-### 本地使用
-
-将 `rules/` 目录下的 `.list` 文件导入 Loon 即可。
+重写脚本：
+```
+https://raw.githubusercontent.com/inyunai/loon_rules/master/rewrite/spotify-fixed.js
+```
 
 ### DNS 污染说明
 

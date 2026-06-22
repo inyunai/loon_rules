@@ -1,0 +1,29 @@
+# NAME: DouYin
+# AUTHOR: blackmatrix7 (Modified)
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2026-05-22 13:06:00
+# DOMAIN: 2
+# DOMAIN-SUFFIX: 20
+# TOTAL: 22
+DOMAIN,lf3-static.bytednsdoc.com
+DOMAIN,v5-dy-o-abtest.zjcdn.com
+DOMAIN-SUFFIX,amemv.com
+DOMAIN-SUFFIX,douyincdn.com
+DOMAIN-SUFFIX,douyinpic.com
+DOMAIN-SUFFIX,douyinstatic.com
+DOMAIN-SUFFIX,douyinvod.com
+DOMAIN-SUFFIX,idouyinvod.com
+DOMAIN-SUFFIX,ixigua.com
+DOMAIN-SUFFIX,ixiguavideo.com
+DOMAIN-SUFFIX,pstatp.com
+DOMAIN-SUFFIX,snssdk.com
+DOMAIN-SUFFIX,toutiao.com
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,ibyteimg.com
+DOMAIN-SUFFIX,byteimg.com
+DOMAIN-SUFFIX,bytednsdoc.com
+DOMAIN-SUFFIX,volces.com
+DOMAIN-SUFFIX,bdurl.net
+DOMAIN-SUFFIX,bytedance.com
+DOMAIN-SUFFIX,bytegecko.com
+DOMAIN-SUFFIX,zijieapi.com

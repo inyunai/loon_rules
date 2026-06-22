@@ -1,0 +1,11 @@
+# Name: Spotify Premium (Stability Edition)
+# Author: inyunai (Modified from Moli-X)
+# Desc: 修复了频繁强制退登的问题，移除了不稳定的翻译逻辑。
+
+[rewrite_local]
+# 1. 核心权限解锁：将原版复杂的路径替换为你自己仓库里的脚本
+^https:\/\/spclient\.wg\.spotify\.com\/user-customization-service\/v1\/customize url script-response-body https://raw.githubusercontent.com/inyunai/loon_rules/master/rewrite/spotify-fixed.js
+
+[mitm]
+# 2. 精简主机名：只保留这一个核心域名，解密过多是掉线主因
+hostname = spclient.wg.spotify.com

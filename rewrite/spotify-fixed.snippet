@@ -1,0 +1,10 @@
+# Name: Spotify Premium (Anti-Logout)
+# Author: inyunai
+# For Quantumult X
+
+[rewrite_local]
+# 匹配权限校验接口，使用你刚刚创建的本地脚本
+^https:\/\/i\.scdn\.co\/storage-mixed\/v1\/config url script-response-body https://raw.githubusercontent.com/inyunai/loon_rules/master/rewrite/spotify-fixed.js
+
+[mitm]
+hostname = i.scdn.co
