@@ -25,9 +25,9 @@ rules/
 
 规则原始链接：
 ```
-https://raw.githubusercontent.com/inyunai/loon_rules/main/rules/bybit.list
-https://raw.githubusercontent.com/inyunai/loon_rules/main/rules/okx.list
-https://raw.githubusercontent.com/inyunai/loon_rules/main/rules/trading.list
+https://raw.githubusercontent.com/inyunai/loon_rules/master/rules/bybit.list
+https://raw.githubusercontent.com/inyunai/loon_rules/master/rules/okx.list
+https://raw.githubusercontent.com/inyunai/loon_rules/master/rules/trading.list
 ```
 
 ### 本地使用
